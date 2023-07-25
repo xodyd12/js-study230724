@@ -29,3 +29,6 @@ console.log(`z: ${z}`);
 let m = 8;
 m ++;
 console.log(`m: ${m}`);
+
+const str = 'hello' * 5.5;
+console.log(`str:${str}`);
