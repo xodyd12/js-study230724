@@ -59,7 +59,6 @@ console.log('=============================');
 console.log(foodList);
 foodList.splice(2, 1);
 console.log(foodList);
-
 foodList.splice(0, 1,'보쌈');
 console.log(foodList);
 
