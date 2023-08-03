@@ -4,35 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Basics</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/styles/app.css" />
-    <script src="assets/scripts/vendor.js" defer></script>
-    <script src="assets/scripts/app.js" defer></script>
-</head>
+    <title>Favorite Movies</title>
+    <link rel="stylesheet" href="Movie/assets/style/app.css" />
+    <script src="Movie/assets/scripts/app.js" defer></script>
+  </head>
   <body>
+    <div id="backdrop"></div>
+    <div class="modal" id="add-modal">
+      <div class="modal__content">
+        <label for="title">영화 제목</label>
+        <input type="text" name="title" id="title" />
+        <label for="image-url">이미지 URL</label>
+        <input type="text" name="image-url" id="image-url" />
+        <label for="rating">평점</label>
+        <input
+          type="number"
+          step="1"
+          max="5"
+          min="1"
+          name="rating"
+          id="rating"
+        />
+      </div>
+      <div class="modal__actions">
+        <button class="btn btn--passive">취소</button>
+        <button class="btn btn--success">추가</button>
+      </div>
+    </div>
+    <div class="modal" id="delete-modal">
+      <h2 class="modal__title">진짜 삭제합니까?</h2>
+      <p class="modal__content">
+        정말 이 항목을 삭제합니까? 삭제하면 되돌릴 수 없습니다.
+      </p>
+      <div class="modal__actions">
+        <button class="btn btn--passive">No (Cancel)</button>
+        <button class="btn btn--danger">Yes</button>
+      </div>
+    </div>
+
     <header>
-        <h1>The Calculator</h1>
+      <h1>좋아하는 영화</h1>
+      <button>ADD MOVIE</button>
     </header>
-    
-    <section id="calculator">
-        <input type="number" id="input-number" />
-        <div id="calc-actions">
-            <button type="button" id="btn-add">+</button>
-            <button type="button" id="btn-subtract">-</button>
-            <button type="button" id="btn-multiply">*</button>
-            <button type="button" id="btn-divide">/</button>
-        </div>
-    </section>
-    <section id="results">
-        <h2 id="current-calculation">0</h2>
-        <h2>Result: <span id="current-result">0</span></h2>
-    </section>
-    <section id="logIn">
-      <h2 id="current-logIn"></h2>
-  </section>
-</body>
+
+    <main>
+      <section id="entry-text" class="card">
+        <p>나의 개인 저장공간~</p>
+      </section>
+      <ul id="movie-list"></ul>
+    </main>
+  </body>
 </html>
