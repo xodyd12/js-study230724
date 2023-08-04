@@ -71,8 +71,8 @@ function foo() {
   const eventHandler = function(fruit,e) {
     console.log('event 객체: ', e);
     console.log('과일명: ',fruit);
-    // console.log(this);
-  };
+};
+// console.log(this);
   const $input = document.querySelector('input');
   
   // document.getElementById('btn').addEventListener('click', eventHandler.bind($input));
