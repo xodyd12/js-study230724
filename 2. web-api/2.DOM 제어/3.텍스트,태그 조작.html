@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #greet span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="greet">
+        Hello<span class="hilight">World!</span>
+    </div>
+
+    <ul id="food-items">
+        <li class="food">짜장면</li>
+        <li class="food">볶음밥</li>
+        <li class="food">파스타</li>
+    </ul>
+
+    <script>
+        const $greet = document.getElementById('greet');
+
+        console.log($greet.textContent.trim());//앞뒤 공백제거 trim()
+        console.log($greet.innerHTML); //쓰지마라
+
+        // $greet.firstElementChild.textContent = 'Hellow Javasctipt!!'
+
+        $greet.innerHTML = 'Hello<span>Javasctipt!</span>';
+
+        const $foods = document.getElementById('food-items');
+        $foods.lastElementChild.textContent= '마카로니'; //마지막 항목을 마카로니로 바꾸기 
+
+
+        $foods.innerHTML += '<li class="food">족발</li>'; // +를 붙혀야 기존 항목 유지후 족발 항목이 들어감
+
+        //자식태그를 전체 삭제
+        $foods.innerHTML = '';
+    </script>
+</body>
+</html>
